@@ -13,9 +13,9 @@ class Weather_app extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => weatherCubit(),
+      create: (context) => WeatherCubit(),
       child: MaterialApp(
-        home: Homepage(),
+        home: const Homepage(),
         theme: ThemeData(useMaterial3: true),
       ),
     );

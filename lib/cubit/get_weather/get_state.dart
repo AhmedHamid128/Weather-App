@@ -1,11 +1,11 @@
-class weatherState {}
+class WeatherState {}
 
-class Initweather extends weatherState {}
+class Initweather extends WeatherState {}
 
-class Loadingweather extends weatherState {}
+class Loadingweather extends WeatherState {}
 
-class Successweather extends weatherState {}
+class Successweather extends WeatherState{}
 
-class Failweather extends weatherState {
+class Failweather extends WeatherState {
   Failweather({required String eorr});
 }

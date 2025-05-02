@@ -16,15 +16,15 @@ class CardWeather extends StatefulWidget {
 class _CardWeatherState extends State<CardWeather> {
   @override
   Widget build(BuildContext context) {
-    Weather weather = BlocProvider.of<weatherCubit>(context).wc!;
-    List<IconData> iconcard = BlocProvider.of<weatherCubit>(context).iconlist!;
+    Weather weather = BlocProvider.of< WeatherCubit>(context).weathercubit!;
+    List<IconData> iconcard = BlocProvider.of< WeatherCubit>(context).iconlist;
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          padding: EdgeInsets.all(8),
+          padding:const EdgeInsets.all(8),
           decoration: BoxDecoration(
-              color: Textcolor.withOpacity(0.1),
+              color: TextColor.withOpacity(0.1),
               borderRadius: BorderRadius.circular(12)),
           child: Column(
             children: [
@@ -34,30 +34,30 @@ class _CardWeatherState extends State<CardWeather> {
                     weather.forecast.forecastday[widget.index].date.toString(),
                   ),
                 ),
-                style: TextStyle(color: Textcolor, fontSize: 18),
+                style: TextStyle(color: TextColor, fontSize: 18),
               ),
-              SizedBox(
+            const  SizedBox(
                 height: 10,
               ),
               Icon(
                 iconcard[widget.index],
-                color: Textcolor,
+                color: TextColor,
               ),
-              SizedBox(
+            const  SizedBox(
                 height: 10,
               ),
               Text(
                 weather.forecast.forecastday[widget.index].day.condition.text
                     .toString(),
-                style: TextStyle(color: Textcolor, fontSize: 18),
+                style: TextStyle(color: TextColor, fontSize: 18),
               ),
-              SizedBox(
+            const  SizedBox(
                 height: 10,
               ),
               Text(
                 weather.forecast.forecastday[widget.index].day.avgtempC
                     .toString(),
-                style: TextStyle(color: Textcolor, fontSize: 18),
+                style: TextStyle(color: TextColor, fontSize: 18),
               ), // average c in day
             ],
           ),

@@ -8,12 +8,12 @@ class Loading_weather extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: kbackcolor,
+      backgroundColor: kbackColor,
       appBar: AppBar(
-        backgroundColor: kbackcolor,
+        backgroundColor: kbackColor,
         title: Text(
           'country',
-          style: TextStyle(color: Textcolor),
+          style: TextStyle(color: TextColor),
         ),
       ),
       body: Center(
@@ -21,8 +21,8 @@ class Loading_weather extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircularProgressIndicator(
-              color: Textcolor,
-              backgroundColor: Textcolor.withOpacity(0.1),
+              color: TextColor,
+              backgroundColor: TextColor.withOpacity(0.1),
               strokeWidth: 6,
             ),
           ],

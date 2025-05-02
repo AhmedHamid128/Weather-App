@@ -16,22 +16,23 @@ class _SerachPageState extends State<SerachPage> {
   @override
   Widget build(BuildContext context) {
     TextEditingController serchcon = TextEditingController();
-    return //serached
+    return 
+    
         Row(children: [
       Expanded(
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding:const EdgeInsets.all(16),
           height: 80,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            color: Textcolor.withOpacity(0.4),
+            color: TextColor. withOpacity(0.4),
           ),
           child: Center(
             child: TextField(
               enabled: true,
               controller: serchcon,
               onSubmitted: (value) {
-                BlocProvider.of<weatherCubit>(context)
+                BlocProvider.of<WeatherCubit>(context)
                     .getweathercubit(loccubit: value);
               },
               decoration: InputDecoration(
@@ -42,34 +43,13 @@ class _SerachPageState extends State<SerachPage> {
                           serchcon == '';
                         });
                       },
-                      icon: Icon(Icons.search)),
+                      icon: const Icon(Icons.search)),
                   border: InputBorder.none),
             ),
           ),
         ),
       ),
     ]);
-    /*
-        : Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: Textcolor,
-            ),
-            child: TextField(
-              decoration: InputDecoration(
-                  suffixIcon: IconButton(
-                      onPressed: () {
-                        setState(() {
-                          serached = false;
-                        
-                        });
-                      },
-                      icon: Icon(Icons.cancel)),
-                  hintText: 'Serach her',
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12))),
-            ),
-          );
-          */
+   
   }
 }

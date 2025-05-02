@@ -14,28 +14,27 @@ class BodyPage extends StatefulWidget {
 }
 
 class _BodyPageState extends State<BodyPage> {
-  Weather? w;
-
+ 
   @override
   Widget build(BuildContext context) {
-    Weather weather = BlocProvider.of<weatherCubit>(context).wc!;
-    IconData iconweather = BlocProvider.of<weatherCubit>(context).icon!;
+    Weather weather = BlocProvider.of<WeatherCubit>(context).weathercubit!;
+    IconData iconweather = BlocProvider.of<WeatherCubit>(context).icon;
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: kbackcolor,
+      backgroundColor: kbackColor,
       appBar: AppBar(
-        backgroundColor: kbackcolor,
+        backgroundColor: kbackColor,
         title: Text(
           'country',
-          style: TextStyle(color: Textcolor),
+          style: TextStyle(color: TextColor),
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            SerachPage(),
-            SizedBox(
+          const  SerachPage(),
+          const  SizedBox(
               height: 40,
             ),
             Row(
@@ -43,25 +42,25 @@ class _BodyPageState extends State<BodyPage> {
               children: [
                 Icon(
                   Icons.location_pin,
-                  color: Textcolor,
+                  color: TextColor,
                   size: 45,
                 ),
-                SizedBox(
+             const   SizedBox(
                   width: 20,
                 ),
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Text(
                     weather.location.country,
-                    style: TextStyle(color: Textcolor, fontSize: 25),
+                    style: TextStyle(color: TextColor, fontSize: 25),
                   ),
                   Text(
                     weather.location.name,
-                    style: TextStyle(color: Textcolor, fontSize: 18),
+                    style: TextStyle(color: TextColor, fontSize: 18),
                   ),
                 ]),
               ],
             ),
-            SizedBox(
+          const  SizedBox(
               height: 30,
             ),
             Row(
@@ -71,25 +70,25 @@ class _BodyPageState extends State<BodyPage> {
                   children: [
                     Text(
                       weather.current.condition.text,
-                      style: TextStyle(color: Textcolor, fontSize: 18),
+                      style: TextStyle(color: TextColor, fontSize: 18),
                     ),
                     Text(
                       weather.current.tempC.toString(),
-                      style: TextStyle(color: Textcolor, fontSize: 18),
+                      style: TextStyle(color: TextColor, fontSize: 18),
                     ),
                   ],
                 ),
-                SizedBox(
+              const  SizedBox(
                   width: 20,
                 ),
                 Icon(
                   iconweather,
                   size: 50,
-                  color: Textcolor,
+                  color: TextColor,
                 )
               ],
             ),
-            SizedBox(
+          const  SizedBox(
               height: 150,
             ),
             Row(

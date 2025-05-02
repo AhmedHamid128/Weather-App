@@ -9,15 +9,15 @@ class ErroerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: kbackcolor,
+      backgroundColor: kbackColor,
       appBar: AppBar(
-        backgroundColor: kbackcolor,
+        backgroundColor: kbackColor,
         title: Text(
           'country',
-          style: TextStyle(color: Textcolor),
+          style: TextStyle(color: TextColor),
         ),
       ),
-      body: Center(
+      body:const Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
